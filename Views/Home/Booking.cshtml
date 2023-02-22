@@ -1,0 +1,63 @@
+﻿@model  SpaBookingSYstemMVC.Models.TblBooking
+@{
+    ViewBag.Title = "Booking";
+}
+
+<center>
+    <br />
+    <br />
+    <br />
+    <br />
+    <table class="tabledecoration">
+        <tr>
+            <td colspan="2" align="center">Register now</td>
+        </tr>
+        <tr>
+            <td align="center">FirstName</td>
+            <td align="center">@Html.TextBoxFor(m=>m.firstName)</td>
+        </tr>
+        <tr>
+            <td align="center">LastName</td>
+            <td align="center">@Html.TextBoxFor(m=>m.lastName)</td>
+        </tr>
+        <tr>
+            <td align="center">Gender</td>
+            <td align="center">
+                <asp:RadioButtonList id="RadioButtonListGender" runat="server">
+                    <asp:ListItem>Male</asp:ListItem>
+                    <asp:Listitem>Female</asp:Listitem>
+                    <asp:ListItem>Other</asp:ListItem>
+                </asp:RadioButtonList>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Email</td>
+            <td align="center">@Html.TextBoxFor(m=>m.email)</td>
+        </tr>
+        <tr>
+            <td align="center">Mobile No.</td>
+            <td align="center">@Html.TextBoxFor(m=>m.mobile)</td>
+        </tr>
+        <tr>
+            <td align="center">Date</td>
+            <td align="center">@Html.TextBoxFor(m=>m.date)</td>
+        </tr>
+        <tr>
+            <td align="center">Address</td>
+            <td align="center">@Html.TextBoxFor(m=>m.address)</td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <input type="Submit" class="btndecoration" value="Book Now" id="btnRegister" />
+            </td>
+
+        </tr>
+
+
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+</center>
+

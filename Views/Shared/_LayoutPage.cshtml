@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+    <meta name="keywords" content="Beauty Spa Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="text/javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+    <!-- pop up box -->
+    <link href="~/Content/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- gallery light box -->
+    <link href="~/Content/css/lsb.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="~/Content/css/style.css" type="text/css" media="all" />
+    <!-- Font-Awesome-Icons-CSS -->
+    <link rel="stylesheet" href="~/Content/css/fontawesome-all.css">
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Paytone+One&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //Web-Fonts -->
+
+
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    <div id="home">
+        <header>
+            <!-- navbar -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand text-white font-weight-bold" href="#">
+                    <span>J</span>k
+                    <span>S</span>pa
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-center mr-xl-5 mt-lg-0 mt-3">
+                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link scroll">
+                                @Html.ActionLink("Homes", "Index", "Home")
+                            </a>
+                        </li>
+                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link scroll">@Html.ActionLink("About", "About", "Home")</a>
+                        </li>
+
+                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link scroll">@Html.ActionLink("Services", "Service", "Home")</a>
+                        </li>
+                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link scroll">@Html.ActionLink("Prices", "prices", "Home")</a>
+                        </li>
+                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link scroll">@Html.ActionLink("Team", "Team", "Home")</a>
+                        </li>
+                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link scroll">@Html.ActionLink("Gallery", "Gallery", "Home")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll">@Html.ActionLink("Contact", "Contact", "Home")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll">@Html.ActionLink("SignUp", "Registration", "Home")</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- //navbar ends here -->
+        </header>
+        <!-- //header -->
+        <!-- banner -->
+        <div class="banner-w3l">
+            <div class="container">
+                <div class="banner-left-wthree">
+                    <div class="banner-text-effectw3ls">
+                        <div class="center-outer">
+                            <div class="center-inner">
+                                <div class="bubbles">
+                                    <h1>JK Beauty Spa</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-dark text-capitalize sec-text-w3ls pt-lg-5 pt-4 pb-sm-4 pb-3">
+                        sessions of
+                        <span>relaxation</span>
+                    </h4>
+                    <p class="text-capitalize mb-sm-4 mb-3">
+                        the balance & harmony of body and mind.
+                        <span class="text-lowercase d-block">Negrar èla storia di uoini donne dediti alla Nullam dui dolor, sagittis ut nte eget.</span>
+                    </p>
+                    <a href="#small-dialog1" class="play-icon popup-with-zoom-anim btn mt-md-4 mt-3" title="Play Video">Watch Video</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- //banner -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="text-center py-sm-5 py-4">
+        <div class="container">
+            <div class="footer-posi-agileinfo">
+                <h2 class="logo-2 font-weight-bold">
+                    <a href="#" class="text-dark">
+                        <span>JK</span>Beauty
+                        <span>S</span>pa
+                    </a>
+                </h2>
+                <div class="social my-4">
+                    <ul>
+                        <li>
+                            <a href="#" class="link facebook" target="_parent">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="mx-3">
+                            <a href="#" class="link twitter" target="_parent">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link google-plus" target="_parent">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- copyright -->
+                <p class="copy-right-grids">
+                    © 2022 JK Beauty Spa. All Rights Reserved | Developed by
+                    <a href="#" target="_blank">Jayesh Ahir</a>
+                </p>
+                <!-- //copyright -->
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- Js files -->
+    <!-- JavaScript -->
+    <script src="~/Content/js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <!-- Default-JavaScript-File -->
+    <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <script src="~/Content/js/bootstrap.js" type="text/javascript"></script>
+
+    <!-- Text effect -->
+    <script src="~/Content/js/text_effect.js" type="text/javascript"></script>
+
+    <!-- pop-up-box -->
+    <script src="~/Content/js/jquery.magnific-popup.js" type="text/javascript"></script>
+
+    <!-- particles (bg effect) -->
+    <script src="~/Content/js/jquery.canvas.particles.min.js" type="text/javascript"></script>
+
+    <!-- gallery light box -->
+    <script src="~/Content/js/lsb.min.js" type="text/javascript"></script>
+
+    <!-- smooth scrolling -->
+    <script src="~/Content/js/SmoothScroll.min.js" type="text/javascript"></script>
+
+    <!-- move-top -->
+    <script src="~/Content/js/move-top.js" type="text/javascript"></script>
+
+    <!-- easing -->
+    <script src="~/Content/js/easing.js" type="text/javascript"></script>
+
+    <!--  necessary snippets for few javascript files -->
+    <script src="~/Content/js/beauty_spa.js" type="text/javascript"></script>
+
+
+
+    </div>
+</body>
+</html>

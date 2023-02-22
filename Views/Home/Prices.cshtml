@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Prices";
+}
+
+<center>
+    <div class="price-sec py-5" id="pricing">
+        <div class="container pb-xl-5 pb-lg-3">
+            <h3 class="text-capitalize font-weight-bold text-center title mb-sm-5 mb-4">our pricing table</h3>
+            <div class="inner_sec_info_agile_w3_info">
+                <div class="row price-grid-main">
+                    <div class="col-lg-4 price-info">
+                        <div class="prices">
+                            <div class="prices-top">
+                                <h3 class="text-center text-capitalize text-white pt-4">
+                                    300rps
+                                    <span>per day</span>
+                                </h3>
+                            </div>
+                            <div class="prices-bottom text-center border p-4">
+                                <div class="prices-h border-bottom pb-4">
+                                    <p class="font-weight-bold">1 Person</p>
+                                    <h4>Personalized</h4>
+                                </div>
+                                <ul class="mt-4">
+                                    <li>Makeup Application</li>
+                                    <li class="my-3">Polish Change</li>
+                                    <li>French Manicure</li>
+                                    <li class="mt-3">Stone Massage</li>
+                                    <li class="my-3">French Manicure</li>
+                                    <li>Haircut & Stye</li>
+                                    <li class="my-3">Signature Facial</li>
+                                    <li>Stone Massage</li>
+                                </ul>
+                                <a href="#" data-toggle="modal" data-target="#myModal1" class="button mt-4">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 price-info my-lg-0 my-5">
+                        <div class="prices">
+                            <div class="prices-top">
+                                <h3 class="text-center text-capitalize text-white pt-4">
+                                    500rps
+                                    <span>per day</span>
+                                </h3>
+                            </div>
+                            <div class="prices-bottom text-center border p-4">
+                                <div class="prices-h border-bottom pb-4">
+                                    <p class="font-weight-bold">2 Persons</p>
+                                    <h4>Personalized</h4>
+                                </div>
+                                <ul class="mt-4">
+                                    <li>Stone Massage</li>
+                                    <li class="my-3">Haircut & Stye</li>
+                                    <li>Signature Facial</li>
+                                    <li class="mt-3">French Manicure</li>
+                                    <li class="my-3">Makeup Application</li>
+                                    <li>Polish Change</li>
+                                    <li class="my-3">Stone Massage</li>
+                                    <li>Signature Facial</li>
+                                </ul>
+                                @*<a href="#" data-toggle="modal" data-target="#myModal1" class="button mt-4">Sign Up</a>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 price-info">
+                        <div class="prices">
+                            <div class="prices-top">
+                                <h3 class="text-center text-capitalize text-white pt-4">
+                                    500rps
+                                    <span>per day</span>
+                                </h3>
+                            </div>
+                            <div class="prices-bottom text-center border p-4">
+                                <div class="prices-h border-bottom pb-4">
+                                    <p class="font-weight-bold">3 Persons</p>
+                                    <h4>Personalized</h4>
+                                </div>
+                                <ul class="mt-4">
+                                    <li>French Manicure</li>
+                                    <li class="my-3">Signature Facial</li>
+                                    <li>Stone Massage</li>
+                                    <li class="mt-3">Stone Massage</li>
+                                    <li class="my-3">Makeup Application</li>
+                                    <li>Haircut & Stye</li>
+                                    <li class="my-3">Polish Change</li>
+                                    <li>French Manicure</li>
+                                </ul>
+                                @*<a href="#" data-toggle="modal" data-target="#myModal1" class="button mt-4">Sign Up</a>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal1 -->
+    <div class="modal" tabindex="-1" role="dialog" id="myModal1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content book-form p-3">
+                <div class="modal-header p-3">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" name="Name" placeholder="Your Name" class="form-control" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="Email" class="email form-control" placeholder="Email" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Password" class="password form-control" placeholder="Password" id="password1" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Password" class="password form-control" placeholder="Confirm Password" id="password2" required="" />
+                        </div>
+                        <div class="check-box">
+                            <input name="chekbox" type="checkbox" id="brand" value="">
+                            <label for="brand">
+                                <span></span>Remember Me
+                            </label>
+                        </div>
+                        <input type="submit" class="mt-4" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+
