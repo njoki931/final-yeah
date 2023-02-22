@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SpaBookingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\SPABOOKINGSYSTEMMVC\SPABOOKINGSYSTEMMVC\APP_DATA\SPABOOKING.MDF.dbo.TblBooking' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblBooking">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="date" />
+            <PropertyRef Name="address" />
+          </Key>
+          <Property Name="firstName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="date" Type="datetime" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\SPABOOKINGSYSTEMMVC\SPABOOKINGSYSTEMMVC\APP_DATA\SPABOOKING.MDF.dbo.TblFeedback' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblFeedback">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="subjec" />
+            <PropertyRef Name="message" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="subjec" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="message" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\SPABOOKINGSYSTEMMVC\SPABOOKINGSYSTEMMVC\APP_DATA\SPABOOKING.MDF.dbo.TblRegister' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblRegister">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="pass" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SpaBookingModelStoreContainer">
+          <EntitySet Name="TblBooking" EntityType="Self.TblBooking" store:Type="Tables" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[TblBooking].[firstName] AS [firstName], 
+[TblBooking].[lastName] AS [lastName], 
+[TblBooking].[email] AS [email], 
+[TblBooking].[mobile] AS [mobile], 
+[TblBooking].[date] AS [date], 
+[TblBooking].[address] AS [address]
+FROM [dbo].[TblBooking] AS [TblBooking]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblFeedback" EntityType="Self.TblFeedback" store:Type="Tables" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[TblFeedback].[name] AS [name], 
+[TblFeedback].[email] AS [email], 
+[TblFeedback].[subjec] AS [subjec], 
+[TblFeedback].[message] AS [message]
+FROM [dbo].[TblFeedback] AS [TblFeedback]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblRegister" EntityType="Self.TblRegister" store:Type="Tables" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[TblRegister].[firstName] AS [firstName], 
+[TblRegister].[lastName] AS [lastName], 
+[TblRegister].[email] AS [email], 
+[TblRegister].[mobile] AS [mobile], 
+[TblRegister].[pass] AS [pass]
+FROM [dbo].[TblRegister] AS [TblRegister]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SpaBookingModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="TblBooking">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="date" />
+            <PropertyRef Name="address" />
+          </Key>
+          <Property Name="firstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblFeedback">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="subjec" />
+            <PropertyRef Name="message" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subjec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="message" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblRegister">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SpaBookingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblBookings" EntityType="Self.TblBooking" />
+          <EntitySet Name="TblFeedbacks" EntityType="Self.TblFeedback" />
+          <EntitySet Name="TblRegisters" EntityType="Self.TblRegister" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="SpaBookingModelStoreContainer" CdmEntityContainer="SpaBookingEntities">
+          <EntitySetMapping Name="TblBookings">
+            <EntityTypeMapping TypeName="SpaBookingModel.TblBooking">
+              <MappingFragment StoreEntitySet="TblBooking">
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblFeedbacks">
+            <EntityTypeMapping TypeName="SpaBookingModel.TblFeedback">
+              <MappingFragment StoreEntitySet="TblFeedback">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="subjec" ColumnName="subjec" />
+                <ScalarProperty Name="message" ColumnName="message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblRegisters">
+            <EntityTypeMapping TypeName="SpaBookingModel.TblRegister">
+              <MappingFragment StoreEntitySet="TblRegister">
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="true" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams />
+  </edmx:Designer>
+</edmx:Edmx>
